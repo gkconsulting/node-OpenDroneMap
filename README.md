@@ -49,15 +49,15 @@ cd LAStools/LASzip
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make && make install
-ldconfig
+sudo make && sudo make install
+sudo ldconfig
 
 git clone https://github.com/pierotofy/PotreeConverter /staging/PotreeConverter
 cd /staging/PotreeConverter
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DLASZIP_INCLUDE_DIRS=/staging/LAStools/LASzip/dll -DLASZIP_LIBRARY=/staging/LAStools/LASzip/build/src/liblaszip.so ..
-make && make install
+sudo make && sudo make install
 ```
 2) Install gdal2tiles.py script, node.js and npm dependencies
 
@@ -143,7 +143,7 @@ node-OpenDroneMap is meant to be a lightweight API. If you are looking for a mor
 
 ## Contributing
 
-Make a pull request small contributions. For big contributions, please open a discussion first. Please use ES6 syntax while writing new Javascript code so that we can keep the code base uniform.
+Make a pull request for small contributions. For big contributions, please open a discussion first. Please use ES6 syntax while writing new Javascript code so that we can keep the code base uniform.
 
 ## Roadmap
 
